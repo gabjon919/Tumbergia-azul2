@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiências Românticas - Tumbergia Azul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+:root{--bg-main:#FAF8F6;--bg-card:#F5F2EE;--text-primary:#3D2817;--text-secondary:#6B5947;--text-muted:#8B7B6B;--primary:#2E86AB;--primary-light:#E8F1F5;--border:#E5DDD5;--shadow:0 2px 8px rgba(0,0,0,0.08);--shadow-lg:0 4px 16px rgba(0,0,0,0.12)}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-main);color:var(--text-primary);line-height:1.6}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',Georgia,serif;line-height:1.2}a{color:var(--primary);text-decoration:none}.navbar{background:rgba(250,248,246,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000}.nav-container{max-width:800px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;height:60px}.logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:0.5rem}.logo:hover{text-decoration:none}.main-container{max-width:800px;margin:0 auto;padding:2rem 1.5rem 4rem}
+
+.page-title{text-align:center;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.page-title .title-icon{font-size:2.5rem;margin-bottom:0.5rem}
+.page-title h1{font-size:2rem;color:var(--text-primary);margin-bottom:0.25rem}
+.page-title p{color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:2px;font-weight:600}
+
+.sections{display:flex;flex-direction:column;gap:1.5rem}
+
+.section-card{background:#fff;border-radius:16px;border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow)}
+
+.section-head{background:var(--primary);padding:1rem 1.25rem;display:flex;align-items:center;gap:0.75rem}
+.section-head .sh-icon{font-size:1.4rem;flex-shrink:0}
+.section-head h2{font-family:'Playfair Display',serif;color:#fff;font-size:1.1rem;line-height:1.2}
+.section-head .sh-sub{font-size:0.65rem;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;font-family:'Inter',sans-serif;margin-top:2px}
+
+.section-body{padding:1.25rem}
+
+.items-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.25rem}
+.items-list li{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.875rem;color:var(--text-secondary);line-height:1.45}
+.items-list li::before{content:'✦';color:var(--primary);font-size:0.65rem;margin-top:4px;flex-shrink:0}
+
+.price-tags{display:flex;flex-direction:column;gap:0.6rem}
+.price-tag{display:flex;align-items:flex-start;gap:0.75rem;background:var(--primary-light);border-radius:10px;padding:0.75rem 1rem;border-left:3px solid var(--primary)}
+.price-value{font-weight:700;font-size:1rem;color:var(--primary);white-space:nowrap;flex-shrink:0}
+.price-desc{font-size:0.78rem;color:var(--text-secondary);line-height:1.4}
+
+.sub-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-muted);margin-bottom:0.75rem}
+
+.adicionais-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:1rem}
+.adicional-item{display:flex;align-items:center;gap:0.5rem;background:var(--primary-light);border-radius:10px;padding:0.65rem 0.75rem;font-size:0.8rem;color:var(--text-secondary);font-weight:500;border:1px solid #d0e8f3}
+.adicional-item .ai-icon{font-size:1.1rem;flex-shrink:0}
+.adicional-item.full{grid-column:span 2}
+
+.consultar-badge{text-align:center;background:var(--primary);color:#fff;border-radius:10px;padding:0.85rem 1rem;font-size:0.8rem;font-weight:600;letter-spacing:0.5px}
+
+footer{border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;color:var(--text-muted);font-size:0.8rem}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">◀️ Tumbergia Azul</a>
+    </div>
+  </nav>
+
+  <main class="main-container">
+
+    <div class="page-title">
+      <div class="title-icon">🌹</div>
+      <h1>Experiências Românticas</h1>
+      <p>Serviços especiais para momentos inesquecíveis</p>
+    </div>
+
+    <div class="sections">
+
+      <!-- Decoração 1 -->
+      <div class="section-card">
+        <div class="section-head">
+          <span class="sh-icon">🛏️</span>
+          <div>
+            <h2>Decoração</h2>
+            <div class="sh-sub">Cama · Hidro · Mesa</div>
+          </div>
+        </div>
+        <div class="section-body">
+          <ul class="items-list">
+            <li>Frase com pétalas de rosas</li>
+            <li>Cisnei com as toalhas</li>
+            <li>Hidro com pétalas de rosa</li>
+            <li>Um vasinho com 6 rosas (hidromassagem)</li>
+            <li>Mesa posta</li>
+            <li>Uma rosa solitária (mesa)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Decoração 2 -->
+      <div class="section-card">
+        <div class="section-head">
+          <span class="sh-icon">💍</span>
+          <div>
+            <h2>Decoração 2</h2>
+            <div class="sh-sub">Pedido de Namoro · Pedido de Casamento</div>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="sub-label">Cama · Hidro · Mesa</div>
+          <ul class="items-list">
+            <li>Frase com pétalas</li>
+            <li>Cisnei com toalhas</li>
+            <li>Hidro com pétalas de rosa</li>
+            <li>3 vasinhos com rosas (2 mesa de cabeceira + 1 hidro)</li>
+            <li>6 balões (3 coração + 3 capsulado canto do quarto)</li>
+            <li>Arco coração (sempre rosas permanentes)</li>
+            <li>Coração no chão com pétalas</li>
+            <li>Letreiro luminoso — <em>casa comigo</em> ou <em>namora comigo</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Adicionais -->
+      <div class="section-card">
+        <div class="section-head">
+          <span class="sh-icon">✨</span>
+          <div>
+            <h2>Adicionais</h2>
+            <div class="sh-sub">Consultar disponibilidade</div>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="adicionais-grid">
+            <div class="adicional-item"><span class="ai-icon">🎈</span>Balões espalhados pelo chão</div>
+            <div class="adicional-item"><span class="ai-icon">🌸</span>Caminho de pétalas</div>
+            <div class="adicional-item"><span class="ai-icon">💐</span>Buquê de rosas</div>
+            <div class="adicional-item"><span class="ai-icon">🎂</span>Bolo de aniversário</div>
+            <div class="adicional-item"><span class="ai-icon">🥂</span>Espumante</div>
+            <div class="adicional-item"><span class="ai-icon">🍷</span>Vinho</div>
+            <div class="adicional-item full"><span class="ai-icon">🧀</span>Tábua de frios</div>
+          </div>
+          <div class="consultar-badge">📲 Consultar disponibilidade</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Tumbergia Azul. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
