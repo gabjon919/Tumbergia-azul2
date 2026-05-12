@@ -3,140 +3,374 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiências Românticas - Tumbergia Azul</title>
+  <title>Decorações Especiais - Tumbergia Azul</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-:root{--bg-main:#FAF8F6;--bg-card:#F5F2EE;--text-primary:#3D2817;--text-secondary:#6B5947;--text-muted:#8B7B6B;--primary:#2E86AB;--primary-light:#E8F1F5;--border:#E5DDD5;--shadow:0 2px 8px rgba(0,0,0,0.08);--shadow-lg:0 4px 16px rgba(0,0,0,0.12)}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-main);color:var(--text-primary);line-height:1.6}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',Georgia,serif;line-height:1.2}a{color:var(--primary);text-decoration:none}.navbar{background:rgba(250,248,246,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000}.nav-container{max-width:800px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;height:60px}.logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:var(--text-primary);text-decoration:none;display:flex;align-items:center;gap:0.5rem}.logo:hover{text-decoration:none}.main-container{max-width:800px;margin:0 auto;padding:2rem 1.5rem 4rem}
+    :root {
+      --bg-main: #FAF8F6;
+      --bg-card: #ffffff;
+      --text-primary: #3D2817;
+      --text-secondary: #6B5947;
+      --text-muted: #8B7B6B;
+      --primary: #2E86AB;
+      --primary-light: #E8F1F5;
+      --border: #E5DDD5;
+      --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
 
-.page-title{text-align:center;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-.page-title .title-icon{font-size:2.5rem;margin-bottom:0.5rem}
-.page-title h1{font-size:2rem;color:var(--text-primary);margin-bottom:0.25rem}
-.page-title p{color:var(--text-muted);font-size:0.85rem;text-transform:uppercase;letter-spacing:2px;font-weight:600}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-.sections{display:flex;flex-direction:column;gap:1.5rem}
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
 
-.section-card{background:#fff;border-radius:16px;border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow)}
+    /* Navbar */
+    .navbar {
+      background: rgba(250,248,246,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 58px;
+      display: flex;
+      align-items: center;
+    }
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+    .back-link svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--text-muted);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .back-link:hover { color: var(--primary); }
 
-.section-head{background:var(--primary);padding:1rem 1.25rem;display:flex;align-items:center;gap:0.75rem}
-.section-head .sh-icon{font-size:1.4rem;flex-shrink:0}
-.section-head h2{font-family:'Playfair Display',serif;color:#fff;font-size:1.1rem;line-height:1.2}
-.section-head .sh-sub{font-size:0.65rem;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;font-family:'Inter',sans-serif;margin-top:2px}
+    /* Main */
+    .main-container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
 
-.section-body{padding:1.25rem}
+    /* Page header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .page-header .header-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      margin-bottom: 1rem;
+    }
+    .page-header .header-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--primary);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+    }
+    .page-header p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
 
-.items-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.25rem}
-.items-list li{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.875rem;color:var(--text-secondary);line-height:1.45}
-.items-list li::before{content:'✦';color:var(--primary);font-size:0.65rem;margin-top:4px;flex-shrink:0}
+    /* Section blocks */
+    .sections { display: flex; flex-direction: column; gap: 1.25rem; }
 
-.price-tags{display:flex;flex-direction:column;gap:0.6rem}
-.price-tag{display:flex;align-items:flex-start;gap:0.75rem;background:var(--primary-light);border-radius:10px;padding:0.75rem 1rem;border-left:3px solid var(--primary)}
-.price-value{font-weight:700;font-size:1rem;color:var(--primary);white-space:nowrap;flex-shrink:0}
-.price-desc{font-size:0.78rem;color:var(--text-secondary);line-height:1.4}
+    .section-card {
+      background: var(--bg-card);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
 
-.sub-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-muted);margin-bottom:0.75rem}
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.1rem 1.25rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-label .label-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .section-label .label-icon svg {
+      width: 17px;
+      height: 17px;
+      stroke: var(--primary);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .section-label .label-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .section-label .label-text .label-sub {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 500;
+      margin-top: 1px;
+    }
 
-.adicionais-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:1rem}
-.adicional-item{display:flex;align-items:center;gap:0.5rem;background:var(--primary-light);border-radius:10px;padding:0.65rem 0.75rem;font-size:0.8rem;color:var(--text-secondary);font-weight:500;border:1px solid #d0e8f3}
-.adicional-item .ai-icon{font-size:1.1rem;flex-shrink:0}
-.adicional-item.full{grid-column:span 2}
+    .section-body { padding: 1.1rem 1.25rem 1.25rem; }
 
-.consultar-badge{display:block;text-align:center;background:var(--primary);color:#fff;border-radius:10px;padding:0.85rem 1rem;font-size:0.8rem;font-weight:600;letter-spacing:0.5px;text-decoration:none}
+    /* Items */
+    .items-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .items-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f0ebe6;
+    }
+    .items-list li:last-child { border-bottom: none; }
+    .items-list li .bullet {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+      margin-top: 7px;
+      opacity: 0.7;
+    }
 
-footer{border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;color:var(--text-muted);font-size:0.8rem}
+    /* Adicionais grid */
+    .adicionais-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .adicionais-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f0ebe6;
+    }
+    .adicionais-list li:last-child { border-bottom: none; }
+    .adicionais-list li .bullet {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    /* CTA */
+    .cta-wrap { margin-top: 2rem; }
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 12px;
+      padding: 0.95rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #246f8f; }
+    .cta-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+      flex-shrink: 0;
+    }
+    .cta-note {
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 0.6rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
   </style>
 </head>
 <body>
 
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="logo">◀️ Tumbergia Azul</a>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Tumbergia Azul
+      </a>
     </div>
   </nav>
 
   <main class="main-container">
 
-    <div class="page-title">
-      <div class="title-icon">🌹</div>
-      <h1>Experiências</h1>
-      <p>Serviços especiais para momentos inesquecíveis</p>
+    <div class="page-header">
+      <div class="header-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <h1>Decorações</h1>
     </div>
 
     <div class="sections">
 
       <!-- Decoração 1 -->
       <div class="section-card">
-        <div class="section-head">
-          <span class="sh-icon">🛏️</span>
-          <div>
+        <div class="section-label">
+          <div class="label-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <div class="label-text">
             <h2>Decoração</h2>
-            <div class="sh-sub">Cama · Hidro · Mesa</div>
+            <div class="label-sub">Cama · Hidro · Mesa</div>
           </div>
         </div>
         <div class="section-body">
           <ul class="items-list">
-            <li>Frase com pétalas de rosas</li>
-            <li>Cisnes com as toalhas</li>
-            <li>Hidro com pétalas de rosa</li>
-            <li>Um vasinho com 6 rosas (hidromassagem)</li>
-            <li>4 porta velas com velas (hidromassagem)</li>
-            <li>Mesa posta</li>
-            <li>Uma rosa solitária (mesa)</li>
+            <li><span class="bullet"></span>Frase com pétalas de rosas</li>
+            <li><span class="bullet"></span>Cisnes com as toalhas</li>
+            <li><span class="bullet"></span>Hidro com pétalas de rosa</li>
+            <li><span class="bullet"></span>Um vasinho com 6 rosas (hidromassagem)</li>
+            <li><span class="bullet"></span>4 porta velas com velas (hidromassagem)</li>
+            <li><span class="bullet"></span>Mesa posta</li>
+            <li><span class="bullet"></span>Uma rosa solitária (mesa)</li>
           </ul>
         </div>
       </div>
 
       <!-- Decoração 2 -->
       <div class="section-card">
-        <div class="section-head">
-          <span class="sh-icon">💍</span>
-          <div>
-            <h2>Decoração 2</h2>
-            <div class="sh-sub">Pedido de Namoro · Pedido de Casamento</div>
+        <div class="section-label">
+          <div class="label-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+          </div>
+          <div class="label-text">
+            <h2>Decoração Especial</h2>
+            <div class="label-sub">Pedido de Namoro · Pedido de Casamento</div>
           </div>
         </div>
         <div class="section-body">
-          <div class="sub-label">Cama · Hidro · Mesa</div>
+          <p style="font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.2px;font-weight:500;margin-bottom:0.75rem;">Cama · Hidro · Mesa</p>
           <ul class="items-list">
-            <li>Frase com pétalas</li>
-            <li>Cisnes com toalhas</li>
-            <li>Hidro com pétalas de rosa</li>
-            <li>4 porta velas com velas (hidromassagem)</li>
-            <li>3 vasinhos com rosas (2 mesa de cabeceira + 1 hidro)</li>
-            <li>6 balões (3 coração + 3 capsulados no canto do quarto)</li>
-            <li>Arco coração (sempre rosas permanentes)</li>
-            <li>Coração no chão com pétalas</li>
-            <li>Letreiro luminoso — <em>casa comigo</em> ou <em>namora comigo</em></li>
-            <li>Mesa posta</li>
-            <li>Uma rosa solitária (mesa)</li>
+            <li><span class="bullet"></span>Frase com pétalas</li>
+            <li><span class="bullet"></span>Cisnes com toalhas</li>
+            <li><span class="bullet"></span>Hidro com pétalas de rosa</li>
+            <li><span class="bullet"></span>4 porta velas com velas (hidromassagem)</li>
+            <li><span class="bullet"></span>3 vasinhos com rosas (2 mesa de cabeceira + 1 hidro)</li>
+            <li><span class="bullet"></span>6 balões (3 coração + 3 capsulados no canto do quarto)</li>
+            <li><span class="bullet"></span>Arco coração (sempre rosas permanentes)</li>
+            <li><span class="bullet"></span>Coração no chão com pétalas</li>
+            <li><span class="bullet"></span>Letreiro luminoso — <em>casa comigo</em> ou <em>namora comigo</em></li>
+            <li><span class="bullet"></span>Mesa posta</li>
+            <li><span class="bullet"></span>Uma rosa solitária (mesa)</li>
           </ul>
         </div>
       </div>
 
       <!-- Adicionais -->
       <div class="section-card">
-        <div class="section-head">
-          <span class="sh-icon">✨</span>
-          <div>
+        <div class="section-label">
+          <div class="label-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </div>
+          <div class="label-text">
             <h2>Adicionais</h2>
           </div>
         </div>
         <div class="section-body">
-          <div class="adicionais-grid">
-            <div class="adicional-item"><span class="ai-icon">🎈</span>Balões espalhados pelo chão</div>
-            <div class="adicional-item"><span class="ai-icon">🌸</span>Caminho de pétalas</div>
-            <div class="adicional-item"><span class="ai-icon">💐</span>Buquê de rosas</div>
-            <div class="adicional-item"><span class="ai-icon">🎂</span>Bolo de aniversário</div>
-            <div class="adicional-item"><span class="ai-icon">🥂</span>Espumante</div>
-            <div class="adicional-item"><span class="ai-icon">🍷</span>Vinho</div>
-            <div class="adicional-item full"><span class="ai-icon">🧀</span>Tábua de frios</div>
-          </div>
-          <a href="https://wa.me/5535998425147?text=Ol%C3%A1!%20Vi%20as%20op%C3%A7%C3%B5es%20de%20decora%C3%A7%C3%A3o%20rom%C3%A2ntica%20no%20guia%20digital%20do%20Tumbergia%20Azul%20e%20gostaria%20de%20saber%20mais%20!" target="_blank" class="consultar-badge">📲 Consultar valores</a>
+          <ul class="adicionais-list">
+            <li><span class="bullet"></span>Balões espalhados pelo chão</li>
+            <li><span class="bullet"></span>Caminho de pétalas</li>
+            <li><span class="bullet"></span>Buquê de rosas</li>
+            <li><span class="bullet"></span>Bolo de aniversário</li>
+            <li><span class="bullet"></span>Espumante</li>
+            <li><span class="bullet"></span>Vinho</li>
+            <li><span class="bullet"></span>Tábua de frios</li>
+          </ul>
         </div>
       </div>
 
     </div>
+
+    <!-- CTA -->
+    <div class="cta-wrap">
+      <a href="https://wa.me/5535998425147?text=Ol%C3%A1!%20Vi%20as%20op%C3%A7%C3%B5es%20de%20decora%C3%A7%C3%A3o%20rom%C3%A2ntica%20no%20guia%20digital%20do%20Tumbergia%20Azul%20e%20gostaria%20de%20saber%20mais%20!" target="_blank" class="cta-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Consultar valores
+      </a>
+      <p class="cta-note">Disponibilidade sujeita a confirmação</p>
+    </div>
+
   </main>
 
   <footer>
